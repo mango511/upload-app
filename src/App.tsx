@@ -1,12 +1,14 @@
-import './App.css'
+import "./App.css";
+import { ThemeProvider } from "@mui/material";
+import theme from "./theme";
+import DashboardPage from "./pages";
 
-function App() {
-
+const App = () => {
   return (
-    <div>
-      This is the Dashboard Page.
-    </div>
-  )
-}
+    <ThemeProvider theme={theme}>
+      <DashboardPage />
+    </ThemeProvider>
+  );
+};
 
-export default App
+export default App;
